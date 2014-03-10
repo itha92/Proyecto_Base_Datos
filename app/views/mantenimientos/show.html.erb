@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @mantenimiento.fecha %>
+</p>
+
+<p>
+  <strong>Observacion:</strong>
+  <%= @mantenimiento.observacion %>
+</p>
+
+<p>
+  <strong>Kilometraje:</strong>
+  <%= @mantenimiento.kilometraje %>
+</p>
+
+<p>
+  <strong>Costo:</strong>
+  <%= @mantenimiento.costo %>
+</p>
+
+<%= link_to 'Edit', edit_mantenimiento_path(@mantenimiento) %> |
+<%= link_to 'Back', mantenimientos_path %>
