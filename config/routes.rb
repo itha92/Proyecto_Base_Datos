@@ -1,8 +1,12 @@
 NeoTerminal::Application.routes.draw do
   
+
+  resources :autobuses
+
+  resources :precio_boletos
+
   resources :mantenimientos
 
-  resources :mantenimiento 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
