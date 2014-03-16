@@ -15,10 +15,12 @@ class MantenimientosController < ApplicationController
   # GET /mantenimientos/new
   def new
     @mantenimiento = Mantenimiento.new
+    @autobuses = Autobus.all
   end
 
   # GET /mantenimientos/1/edit
   def edit
+    @autobuses = Autobus.all
   end
 
   # POST /mantenimientos
@@ -69,6 +71,6 @@ class MantenimientosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mantenimiento_params
-      params.require(:mantenimiento).permit(:fecha, :observacion, :kilometraje, :costo)
+      params.require(:mantenimiento).permit(:fecha, :observacion, :kilometraje, :costo, :autobus_id)
     end
 end

@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20140314010504) do
     t.decimal  "costo",       precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "autobus_id"
   end
 
   create_table "pasajeros", force: true do |t|

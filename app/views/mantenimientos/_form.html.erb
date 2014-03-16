@@ -27,8 +27,9 @@
 	<%= f.label :costo %><br>
 	<%= f.text_field :costo %>
 	</div>
-	<div classs="autobuses">
-	<%= collection_select(:autobus, :collection_select, Autobus.all, :id, :modelo) %>
+	<div classs="field">
+	<%= f.label :autobus%>
+	<%= collection_select(:mantenimiento, :autobus_id, @autobuses, :id, :modelo) %>
 	</div>
 	<div class="actions">
 	<%= f.submit %>

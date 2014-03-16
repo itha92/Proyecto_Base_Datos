@@ -1,5 +1,5 @@
 class Autobus < ActiveRecord::Base
 	belongs_to :empleado
-	belongs_to :mantenimiento
+	has_many :mantenimiento
 	belongs_to :asiento
 end

@@ -7,6 +7,7 @@
       <th>Observacion</th>
       <th>Kilometraje</th>
       <th>Costo</th>
+      <th>Bus_id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,6 +21,11 @@
         <td><%= mantenimiento.observacion %></td>
         <td><%= mantenimiento.kilometraje %></td>
         <td><%= mantenimiento.costo %></td>
+        <td>
+          <% unless mantenimiento.autobus.nil? %>
+          <%= mantenimiento.autobus.modelo %>
+          <%end%>
+        </td>
         <td><%= link_to 'Show', mantenimiento %></td>
         <td><%= link_to 'Edit', edit_mantenimiento_path(mantenimiento) %></td>
         <td><%= link_to 'Destroy', mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>

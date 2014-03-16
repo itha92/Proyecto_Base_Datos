@@ -7,6 +7,7 @@ class CreateMantenimientos < ActiveRecord::Migration
       t.decimal :costo
 
       t.timestamps
+      t.references :autobus
     end
   end
 end
