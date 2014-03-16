@@ -1,6 +1,22 @@
 NeoTerminal::Application.routes.draw do
   
 
+  resources :precio_paquetes
+
+  resources :encomiendas
+
+  resources :boletos
+
+  resources :terminals
+
+  resources :itinerarios
+
+  resources :pasajeros
+
+  resources :asientos
+
+  resources :empleados
+
   resources :autobuses
 
   resources :precio_boletos

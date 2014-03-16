@@ -1,0 +1,33 @@
+<h1>Listing itinerarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destino</th>
+      <th>Origen</th>
+      <th>Fecha</th>
+      <th>Hora salida</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itinerarios.each do |itinerario| %>
+      <tr>
+        <td><%= itinerario.destino %></td>
+        <td><%= itinerario.origen %></td>
+        <td><%= itinerario.fecha %></td>
+        <td><%= itinerario.hora_salida %></td>
+        <td><%= link_to 'Show', itinerario %></td>
+        <td><%= link_to 'Edit', edit_itinerario_path(itinerario) %></td>
+        <td><%= link_to 'Destroy', itinerario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itinerario', new_itinerario_path %>

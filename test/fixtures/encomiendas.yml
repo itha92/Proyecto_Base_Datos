@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  destinatario: MyString
+  remitente: MyString
+  peso: 9.99
+  destino: MyString
+  origen: MyString
+  precio: 9.99
+  is_delivered: false
+  is_shipped: false
+  is_onhold: false
+  fecha: 2014-03-13
+
+two:
+  destinatario: MyString
+  remitente: MyString
+  peso: 9.99
+  destino: MyString
+  origen: MyString
+  precio: 9.99
+  is_delivered: false
+  is_shipped: false
+  is_onhold: false
+  fecha: 2014-03-13

@@ -1,0 +1,43 @@
+<h1>Listing empleados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identidad</th>
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Celular</th>
+      <th>Sexo</th>
+      <th>Fecha nac</th>
+      <th>Cargo</th>
+      <th>Is active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empleados.each do |empleado| %>
+      <tr>
+        <td><%= empleado.identidad %></td>
+        <td><%= empleado.nombre %></td>
+        <td><%= empleado.direccion %></td>
+        <td><%= empleado.telefono %></td>
+        <td><%= empleado.celular %></td>
+        <td><%= empleado.sexo %></td>
+        <td><%= empleado.fecha_nac %></td>
+        <td><%= empleado.cargo %></td>
+        <td><%= empleado.is_active %></td>
+        <td><%= link_to 'Show', empleado %></td>
+        <td><%= link_to 'Edit', edit_empleado_path(empleado) %></td>
+        <td><%= link_to 'Destroy', empleado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Empleado', new_empleado_path %>

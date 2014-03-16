@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Asiento no:</strong>
+  <%= @asiento.asiento_no %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @asiento.tipo %>
+</p>
+
+<p>
+  <strong>Is active:</strong>
+  <%= @asiento.is_active %>
+</p>
+
+<%= link_to 'Edit', edit_asiento_path(@asiento) %> |
+<%= link_to 'Back', asientos_path %>

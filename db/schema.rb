@@ -11,13 +11,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310235948) do
+ActiveRecord::Schema.define(version: 20140314010504) do
+
+  create_table "asientos", force: true do |t|
+    t.string   "asiento_no"
+    t.string   "tipo"
+    t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "autobuses", force: true do |t|
     t.string   "marca"
     t.string   "modelo"
     t.integer  "capacidad"
     t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "boletos", force: true do |t|
+    t.datetime "fecha"
+    t.decimal  "descuento",  precision: 10, scale: 0
+    t.decimal  "subtotal",   precision: 10, scale: 0
+    t.decimal  "total",      precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "empleados", force: true do |t|
+    t.string   "identidad"
+    t.string   "nombre"
+    t.text     "direccion"
+    t.string   "telefono"
+    t.string   "celular"
+    t.string   "sexo"
+    t.date     "fecha_nac"
+    t.string   "cargo"
+    t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "encomiendas", force: true do |t|
+    t.string   "destinatario"
+    t.string   "remitente"
+    t.decimal  "peso",         precision: 10, scale: 0
+    t.string   "destino"
+    t.string   "origen"
+    t.decimal  "precio",       precision: 10, scale: 0
+    t.boolean  "is_delivered"
+    t.boolean  "is_shipped"
+    t.boolean  "is_onhold"
+    t.date     "fecha"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "itinerarios", force: true do |t|
+    t.string   "destino"
+    t.string   "origen"
+    t.date     "fecha"
+    t.time     "hora_salida"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,11 +86,35 @@ ActiveRecord::Schema.define(version: 20140310235948) do
     t.datetime "updated_at"
   end
 
+  create_table "pasajeros", force: true do |t|
+    t.string   "identidad"
+    t.string   "nombre"
+    t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "precio_boletos", force: true do |t|
     t.decimal  "precio",     precision: 10, scale: 0
     t.string   "origen"
     t.string   "destino"
     t.string   "clase"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "precio_paquetes", force: true do |t|
+    t.string   "tipo_paquete"
+    t.decimal  "costo",        precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "terminals", force: true do |t|
+    t.string   "codigo"
+    t.string   "telefono"
+    t.string   "direccion"
+    t.boolean  "is_active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

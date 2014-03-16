@@ -1,3 +1,3 @@
 class Mantenimiento < ActiveRecord::Base
-	belongs_to :autobus
+	has_many :autobus
 end
