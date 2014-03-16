@@ -1,4 +1,4 @@
 class Empleado < ActiveRecord::Base
 	has_one :autobus
-	belongs_to :terminal
+	has_one :terminal
 end

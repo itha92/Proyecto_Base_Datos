@@ -1,6 +1,6 @@
 class Terminal < ActiveRecord::Base
-	has_many :boletos
-	has_many :encomienda
-	has_many :itinerario
-	has_many :empleado
+	belongs_to :boleto
+	belongs_to :encomienda
+	belongs_to :itinerario
+	belongs_to :empleado
 end
